@@ -1,0 +1,13 @@
+header#list-header
+	.container-fluid
+		img#list-logo(src="img/logo-white.png")
+		form.form-group#search-box(method="GET")
+			input.form-control(type="text", name="search", placeholder="Cari berdasarkan Plat Nomor...")
+			i.fa.fa-search(aria-hidden="true")
+		#user
+			i.fa.fa-user-circle-o(aria-hidden="true")
+			span
+				| <?php echo $_SESSION['user']; ?>
+		a.btn.btn-danger#logout(href="vehiclelist.php?q=logout")
+			i.fa.fa-sign-out(aria-hidden="true")
+

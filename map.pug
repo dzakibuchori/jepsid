@@ -1,0 +1,27 @@
+doctype html
+html
+	include pug/php_vehiclelist_isset.php
+	head
+		include pug/head.pug
+		include pug/js.pug
+	body
+		#list-wrapper
+			include pug/header.pug
+			nav.container-fluid
+				div.row
+					li.col-sm-4.col-xs-4.vehicle
+						span
+							i.fa.fa-car(aria-hidden="true")
+							|Vehicles
+					li.col-sm-4.col-xs-4.nav-active.map
+						span
+							i.fa.fa-map(aria-hidden="true")
+							|Map
+					li.col-sm-4.col-xs-4.notif
+						span
+							i.fa.fa-bell(aria-hidden="true")
+							|Notification
+			section.container-fluid
+				.row.map
+			include pug/footer.pug
+		

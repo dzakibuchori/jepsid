@@ -1,0 +1,30 @@
+@mixin placeholders {
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			@content;
+	}
+
+	&::-moz-placeholder { /* Firefox 19+ */
+			@content;
+	}
+
+	&:-ms-input-placeholder { /* IE 10+ */
+			@content;
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+			@content;
+	}
+}
+
+@mixin font-face($font-name, $font, $ext: ttf){
+	$font: unquote($font);
+	$ext: $ext;
+	@font-face{
+		font-family: $font-name;
+		@if	$ext == ttf {
+			src: url(/jasket.co.id/fonts/#{$font}.ttf)
+		} @else if $ext == otf{
+			src: url(/jasket.co.id/fonts/#{$font}.otf)
+		}
+	}
+}

@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		include pug/head.pug
+	body
+		#wrapper
+			header
+			#main-wrapper
+				#main
+					img#logo(src="./img/logo.png", alt="logo")
+					.lang
+						.btn-group
+							.btn.btn-primary.btn-sm ENG
+							.btn.btn-danger.btn-sm IND
+
+					form.form-group(method="POST", action="")
+						input.form-control.input(type="text", name="user", placeholder="user")
+						input.form-control.input(type="password",name="password",placeholder="password")
+						input.btn.btn-block.input#login(type="submit",name="login",value="LOGIN")
+						.checkbox
+							.text-left.row
+								label.col-xs-12.col-xs-offset-1
+									input(type="checkbox",name="remember")
+									span#remember remember me?
+					include pug/php_index.php
+			include pug/footer.pug
